@@ -4,7 +4,7 @@ import WatchVideoButton from '../WatchVideoButton';
 
 const Highlights = () => {
   return (
-    <div className='w-full py-[2rem] px-4 bg-white'>
+    <div className='w-full py-[2rem] px-4 bg-[#FAF9F6]'>
         <div className='text-5xl p-5 pt-0 text-center font-semibold'>
             Highlights
         </div>

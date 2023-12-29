@@ -1,26 +1,35 @@
-import React from 'react'
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import {useState} from 'react'
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(false);
 
-    const handleNav = () => {
-        setNav(!nav)
-    }
+  const handleNav = () => {
+    setNav(!nav);
+  };
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-1 border-b-2 border-gray-600'>
-        <img className='w-[85px] h-[85px]' src='/images/custom-f1-logo (1).png' alt='/' />
-        <h1 className='w-full text-3xl font-thin text-[#000300] pl-4'>FORMULA ONE - INSIGHTS</h1>
-        <ul className='hidden md:flex'>
-            <li className='p-4'>Home</li>
-            <li className='p-4'>About</li>
-            <li className='p-4'>Teams</li>
-            <li className='p-4'>Drivers</li>
-            <li className='p-4'>Contact</li>
-        </ul>
+      <img className='w-[85px] h-[85px]' src='/images/custom-f1-logo (1).png' alt='/' />
+      <h1 className='w-full text-3xl font-thin text-[#000300] pl-4'>FORMULA ONE - INSIGHTS</h1>
+      <ul className='hidden md:flex'>
+        <li className='p-4'>
+          <Link to='/'>Home</Link>
+        </li>
+        <li className='p-4'>
+          <Link to='/about'>About</Link>
+        </li>
+        <li className='p-4'>
+          <Link to='/teams'>Teams</Link>
+        </li>
+        <li className='p-4'>
+          <Link to='/drivers'>Drivers</Link>
+        </li>
+        <li className='p-4'>
+          <Link to='/contact'>Contact</Link>
+        </li>
+      </ul>
         {/* Mobile View Stuff*/}
         <div onClick={handleNav} className='block md:hidden'>
             {!nav ? <AiOutlineMenu size={20}/> : <AiOutlineClose size={20} /> }
