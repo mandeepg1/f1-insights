@@ -5,3 +5,9 @@
 body {
   background-color: #FAF9F6;
 }
+
+@media (max-width: 480px) {
+  .custom-sm-pl-0 {
+    padding-left: 0 !important;
+  }
+}

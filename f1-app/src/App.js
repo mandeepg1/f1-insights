@@ -9,6 +9,7 @@ import Teams from './pages/Teams';
 import Drivers from './pages/Drivers';
 import ContactUs from './pages/ContactUs';
 import About from './pages/About';
+import DriverInfo from './components/DriverInfo';
 
 function App() {
   return (
@@ -30,7 +31,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/highlights" element={<Highlights />} />
           <Route path="/teams" element={<Teams />} />
-          <Route path="/drivers" element={<Drivers />} />
+          <Route
+            path="/drivers" 
+            element={
+              <Drivers/>            } />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
         
